@@ -2,8 +2,14 @@
 #include <Ethernet.h>
 #include <Phant.h>
  
+#include "HeaderKey.h"
+
+const char public_key = PHANT_PUBLIC_KEY;
+const char private_key = PHANT_PRIVATE_KEY;
+
+
 char server[] = "data.sparkfun.com";
-Phant phant("data.sparkfun.com", "public_key", "private_key");
+Phant phant("data.sparkfun.com", public_key, private_key);
 int randNumber;
 int randNumber2;
 int randNumber3;
