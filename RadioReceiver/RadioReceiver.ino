@@ -10,7 +10,7 @@
 
 #include <VirtualWire.h>
 int receive_pin = 2;
-int numbers[10]; // Change 3 to number of integers you wish to send.
+int numbers[6]; // Change 3 to number of integers you wish to send.
 
 void setup()
 {
@@ -33,15 +33,45 @@ void loop()
 
   if (vw_get_message(buf, &buflen)) // check to see if anything has been received
   {
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 6; i++)
     {
       numbers[i] = word(buf[i*2+1], buf[i*2]);
       //Serial.print("numbers[");
       //Serial.print(i, DEC);
       //Serial.print("]=");
       //Serial.print(numbers[i], DEC);
+      
+      if (i == 0)
+      {
+        Serial.print("Sensor ID = ");
+      }
+      
+      if (i == 1)
+      {
+        Serial.print("Light = ");
+      }
+      
+      if (i == 2)
+      {
+        Serial.print("Temp = ");
+      }
+      
+      if (i == 3)
+      {
+        Serial.print("Random 1 = ");
+      }
+      
+      if (i == 4)
+      {
+        Serial.print("Random 2 = ");
+      }
+      
+      if (i == 5)
+      {
+        Serial.print("Count = ");
+      }    
+      
       Serial.println(numbers[i], DEC);
-      //Serial.print("  ");
     }
     Serial.println();
   }
