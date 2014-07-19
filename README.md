@@ -1,6 +1,6 @@
 # Simple Radio Receiver
 
-This is a really simple project using the [VirtualWire](http://www.airspayce.com/mikem/arduino/VirtualWire/) class to send a simple signal from a Transmitter ([see project here](https://github.com/hailspuds/SensorProject---Transmitter)) to a receiver, the to Sparkfun's Phant data storage service via the Arduino.
+This is a really simple project using the [VirtualWire](http://www.airspayce.com/mikem/arduino/VirtualWire/) class to send a simple signal from a Transmitter ([see project here](https://github.com/hailspuds/SensorProject---Transmitter)) to a receiver, then to Sparkfun's Phant data storage service via the Arduino.
 
 This should work as is. My code is released under the MIT licence.
 
