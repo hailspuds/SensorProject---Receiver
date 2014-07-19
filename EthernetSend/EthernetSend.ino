@@ -4,8 +4,8 @@
  
 #include "HeaderKey.h"
 
-const char public_key = PHANT_PUBLIC_KEY;
-const char private_key = PHANT_PRIVATE_KEY;
+const char public_key[] = PHANT_PUBLIC_KEY;
+const char private_key[] = PHANT_PRIVATE_KEY;
 
 
 char server[] = "data.sparkfun.com";
