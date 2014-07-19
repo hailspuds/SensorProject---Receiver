@@ -22,7 +22,7 @@ IPAddress gateway(192, 168, 1, 254);
 // the subnet:
 IPAddress subnet(255, 255, 255, 0);
 //the IP address is dependent on your network
-IPAddress ip(192, 168, 1, 23);
+IPAddress ip(192, 168, 1, 24);
 
 EthernetClient client;
 
@@ -89,7 +89,7 @@ void loop() {
       if (i == 4)
       {
         Serial.print("Random 2 = ");
-        phant.add("random1", numbers[i]);
+        phant.add("random2", numbers[i]);
       }
 
       if (i == 5)
@@ -116,13 +116,9 @@ void httppost()
     //Serial.println("----POSTED TEST URL:----");
     //Serial.println(phant.url());
     //Serial.println("------------------------");
-
     client.println(phant.post());
-
-    Serial.println("----POSTED POST:----");
-    Serial.println(phant.post());
-
-    //client.println(phant.post());
+    //Serial.println("----POSTED POST:----");
+    //Serial.println(phant.post());
   }
   else
   {
