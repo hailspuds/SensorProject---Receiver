@@ -10,7 +10,7 @@
 
 #include <VirtualWire.h>
 int receive_pin = 2;
-int numbers[3]; // Change 3 to number of integers you wish to send.
+int numbers[10]; // Change 3 to number of integers you wish to send.
 
 void setup()
 {
@@ -33,28 +33,15 @@ void loop()
 
   if (vw_get_message(buf, &buflen)) // check to see if anything has been received
   {
-    Serial.print(buflen, DEC);
-    Serial.println(" bytes received!");
-  
-    for (int i = 0; i < buflen; i++)
-    {
-      Serial.print("buf[");
-      Serial.print(i, DEC);
-      Serial.print("]=");
-      Serial.print(buf[i], DEC);
-      Serial.print("  ");
-    }
-    Serial.println();
-
-    //memcpy(buf, numbers, buflen);
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 10; i++)
     {
       numbers[i] = word(buf[i*2+1], buf[i*2]);
-      Serial.print("numbers[");
-      Serial.print(i, DEC);
-      Serial.print("]=");
-      Serial.print(numbers[i], DEC);
-      Serial.print("  ");
+      //Serial.print("numbers[");
+      //Serial.print(i, DEC);
+      //Serial.print("]=");
+      //Serial.print(numbers[i], DEC);
+      Serial.println(numbers[i], DEC);
+      //Serial.print("  ");
     }
     Serial.println();
   }
